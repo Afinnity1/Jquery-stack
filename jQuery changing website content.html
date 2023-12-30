@@ -1,0 +1,73 @@
+<html>
+
+	<head>
+	
+		<title>jQuery</title>
+	
+		<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+		
+		<style>
+		
+			#green-circle {
+				
+				background-color: green;
+				border-radius: 50px;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+				
+			}
+			
+
+			
+		</style>
+		
+	</head>
+
+	<body>	
+	
+		<div id = "green-circle"></div>
+	
+		<p>This is some text</p>
+		
+		<iframe src = "http://www.codestars.com"></iframe>
+		
+			<script type="text/javascript">
+			
+		// When the green circle is clicked the paragraph content changes.
+				$("#green-circle").click(function() {
+		// Here instead of going through the hassle of writting document.getElementById().innerHTML = "hello", We can just used the jQuery equivilent method below to get the same result.
+					$("p").html("hello");
+					
+		// apart from using .html for changing the html of an element ,we can also use it to get the html of an element as shown below.			
+					alert($("p").html());
+				
+				});
+				
+				
+				
+				
+				
+		// Here instead of clicking, when the user hovers over the green circle. the html element is alerted to the page. This is done by using the (.hover) action.	
+				$("#green-circle").hover(function() {
+				
+						alert($("p").html());
+				
+				});
+				
+		
+		// here when we hover over the green circle the iframe changes to the the other one.
+		// The .attr stands for the attribute, which lets use change anything in the iframe tag.
+			$("#green-circle").hover(function() {
+				
+					$("iframe").attr("src", "https://www.ecowebhosting.co.uk");
+				
+				});
+		
+				
+			</script>
+			
+	</body>
+
+
+</html>

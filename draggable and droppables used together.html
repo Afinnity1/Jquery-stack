@@ -1,0 +1,64 @@
+<html>
+
+	<head>
+
+		<title>jQuery</title>
+		
+			<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+			
+			<script src="jquery-ui/jquery-ui.js"></script>
+			
+			<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+			
+			<style type="text/css">
+			
+				#draggable {
+				
+					width:100px;
+					height:100px;
+					background-color:purple;
+				
+				}
+				
+				#droppable {
+				
+					width:300px;
+					height:300px;
+					background-color:grey;
+				
+				}
+				
+			</style>
+
+	</head>
+
+	<body>
+	
+			<div id="draggable"></div>
+			<div id="droppable"></div>
+		
+			<script type="text/javascript">
+		/* Here two boxes are created assigned with different id's, one carrying a draggable action and one carrying a droppable action.
+			when the draggable box is placed in the droppable box we created a callback function so it alerts a popup message and also
+			writes the event to the console.log()
+		*/
+				$("#draggable").draggable();
+				
+				$("#droppable").droppable({
+				
+						drop: function( event, ui) {
+							
+							alert("hello master");
+							console.log(event);
+					
+					} 
+				
+				});
+			
+			</script>
+
+
+	</body>
+
+
+</html>

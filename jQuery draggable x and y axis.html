@@ -1,0 +1,39 @@
+<html>
+
+	<head>
+
+		<title>jQuery</title>
+		
+			<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+			
+			<script src="jquery-ui/jquery-ui.js"></script>
+			
+			<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+			
+			<style type="text/css">
+			
+				
+			</style>
+
+	</head>
+
+	<body>
+	
+			<div id="draggable">Drag me</div>
+			
+			<div id="draggable2">drag me too!</div>
+		
+			<script type="text/javascript">
+			// jquery ui draggable action in which the string being dragged can only be dragged horizontally.
+				$("#draggable").draggable( {axis: "x"} );
+				
+			// jquery ui draggable action in which the string being dragged can only be dragged vertically.
+				$("#draggable2").draggable( {axis: "y"} );
+			
+			</script>
+
+
+	</body>
+
+
+</html>

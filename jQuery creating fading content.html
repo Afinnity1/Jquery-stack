@@ -1,0 +1,85 @@
+<html>
+
+	<head>
+	
+		<title>jQuery</title>
+	
+		<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+		
+		<style>
+		
+			#green-circle {
+				
+				background-color: green;
+				border-radius: 50px;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+				
+			}
+			
+			.red-square {
+			
+				background-color: red;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			
+			}
+			
+			.red-square {
+			
+				background-color: red;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			
+			}
+
+			
+		</style>
+		
+	</head>
+
+	<body>	
+	
+		<div id = "green-circle"></div>
+		<div class = "red-square"></div>
+		<div class = "red-square"></div>
+	
+			<script type="text/javascript">
+		
+				$("div").click(function() { 
+			// A jquery action that fades the content you assign it to.	
+					$("#green-circle").fadeOut();
+				
+				})
+				
+				
+			// Parameter that makes it fade out slowly.	
+				$("div").click(function() { 
+				
+					$("#green-circle").fadeOut("slow");
+				
+				
+				})
+			
+			// This is a call back declaration, in which when the fadeOut is completed an action can take place; i.e an alert action like the one below.
+				$("div").click(function() { 
+				
+					$("#green-circle").fadeOut("slow", function() {
+					
+						alert("fadeOut has finished");
+					
+					});
+				
+				})
+		
+			// One of the pparticularly useful declaration of call back action is when youre getting data from another website or another bit of your website.
+				
+			</script>
+			
+	</body>
+
+
+</html>

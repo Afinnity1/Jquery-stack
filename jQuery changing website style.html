@@ -1,0 +1,110 @@
+<html>
+
+	<head>
+	
+		<title>jQuery</title>
+	
+		<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+		
+		<style>
+		
+			#green-circle {
+				
+				background-color: green;
+				border-radius: 50px;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+				
+			}
+			
+
+			
+		</style>
+		
+	</head>
+
+	<body>	
+	
+		<div id = "green-circle"></div>
+	
+			<script type="text/javascript">
+			// jQuery methods of changing website styles
+			
+			
+				$("#green-circle").click(function() {
+			// here we used this jQuery method to change the background color of the circle when the green circle is clicked.
+					$("#green-circle").css("background-color", "pink");
+				
+				});
+				
+	
+				$("#green-circle").click(function() {
+			// here we used this jQuery method to alert the background color for the circle when the green circle is clicked.
+					alert($("#green-circle").css("background-color"));
+				
+				});
+				
+				
+					$("#green-circle").click(function() {
+			// here we used this jQuery method to change the width of the circle when the green circle is clicked.
+					alert($("#green-circle").css("width", "400px"));
+				
+				});
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			// Here when any of the shapesare clicked they'll dissappear. instead of writind each shapes id/class on different lines of codes we just used the div name so the action works for all. 	
+			// The problem we enciuntered was that onceone shaped was clicked all the shapes dissappeared.
+				$("div").click(function() {
+				
+					$("div").css("display", "none");
+				
+				});
+			// So in orderto solve this problem we used the ( this ) action which lets the dissappearing action happen only to the individual shaped clicked
+				
+				$("div").click(function() {
+				
+					$(this).css("display", "none");
+				
+				});
+				
+				
+				
+				
+				
+				
+				
+				
+		// Using the ( this ) so that when a user clicks on any of the shape it pops an an alert of the shape he/she clicked. But since the red square arent id's but classes theyll pop up an undefined.
+				$("div").click(function() {
+				
+					alert("you clicked on a " + $(this).attr("id"));
+					
+				});
+		// In order to solve that issue we use if conditions.
+				if ( $(this).attr("id") === "green-circle" ) {
+						
+						alert("you clicked on a " + $(this).attr("id"));
+					
+					} else if ( $(this).attr("class") === "red-square") {
+					
+						alert("you clicked on a " + $(this).attr("class"));
+					
+					}
+				
+				});
+			
+				
+			</script>
+			
+	</body>
+
+
+</html>

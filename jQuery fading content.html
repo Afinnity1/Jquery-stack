@@ -1,0 +1,55 @@
+<html>
+
+	<head>
+	
+		<title>jQuery</title>
+	
+		<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+		
+		<style type = "text/css">
+		
+			#hiddenText {
+			
+				display: none;
+			
+			}
+		
+		</style>
+		
+	</head>
+
+	<body>	
+	
+		<span id = "hiddenText">this text is an hidden text</span>
+		<button id = "fadeIn">Fade in</button>
+		
+		<p>welcome to this site, click the button below to continue</p>
+		<button id = "accessButton">Continue</button>
+	
+			<script type="text/javascript">
+		
+			// Hides the first paragraph text. when the fade in button is clicked the hidden texts fades into the page.	
+				$("#fadeIn").click(function() {
+					
+						$("#hiddenText").fadeIn("slow");
+					
+					});
+				
+			// Here when the button is clicked the paragraph text fades and an alert dialog is popped up.
+				$("#accessButton").click(function() {
+				
+					$("p").fadeOut("slow", function() {
+					
+						alert("Access granted");
+					
+					});
+				
+				});
+			
+				
+			</script>
+			
+	</body>
+
+
+</html>

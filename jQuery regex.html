@@ -1,0 +1,43 @@
+<html>
+
+	<head>
+	
+		<title>jQuery</title>
+	
+		<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+		
+	</head>
+
+	<body>	
+
+
+			<script type="text/javascript">
+
+			// Here we are working with regular expressions (regex) which are used to check the format/ or content of a string.
+			// basic layout of how regex looks. We first define our regex with a variable and then we use // where we put a string inside to match against another string.
+				 var regex = /great/;
+				 
+				 var string = "regex is great";
+				 
+				 var result = string.match(regex);
+			// if you run this output it'll alert the great string because it as a match in the string variable but if we put a string in the regex variable that doesnt match with any string in the string var the output pop up will display null.
+				 alert(result);
+			
+			
+			
+			// incase we write an uppercase in the regex variable we use a i flag so itll be letter case sensitive and pop up the output.
+				var regex = /GREAT/i;
+				 
+			    var string = "regex is great";
+				 
+			    var result = string.match(regex);
+				 
+				  alert(result);
+			
+			
+			</script>
+			
+	</body>
+
+
+</html>

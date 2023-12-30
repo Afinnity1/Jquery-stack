@@ -1,0 +1,38 @@
+<html>
+
+	<head>
+
+		<title>jQuery</title>
+		
+			<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+			
+			<script src="jquery-ui/jquery-ui.js"></script>
+			
+			<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+			
+			<style type="text/css">
+			
+				
+			</style>
+
+	</head>
+
+	<body>
+		//here inline css was used.
+			<div style="width:400px;height:300px;background-color:yellow">
+			
+				<span>Im stuck in the box</span>
+			
+			</div>
+		
+			<script type="text/javascript">
+		//Here the string in this scenario can only be dragged about in its box by using the .draggable( {containment: "parent"} );
+				$("span").draggable( {containment: "parent"} );
+			
+			</script>
+
+
+	</body>
+
+
+</html>

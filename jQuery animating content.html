@@ -1,0 +1,76 @@
+<html>
+
+	<head>
+	
+		<title>jQuery</title>
+	
+		<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+		
+		<style type = "text/css">
+
+			#green-circle {
+			
+				background-color: green;
+				border-radius: 50%;
+				width:150px;
+				height:150px;
+			
+			}
+		
+		</style>
+		
+	</head>
+
+	<body>	
+
+			<div id = "green-circle"></div>
+
+			<script type="text/javascript">
+		//Here we're dealing with animating contents on a webpage.	
+		
+			$("#green-circle").click(function() {
+		// In jQuery we use the .animate() action to perform animation operations. we then place the animation quantities in array {} incase its more than one animation function we want to perform.
+		// Here the green circle when clicked will increase in width and height and the 2000 stands for milliseconds which is 2 seconds which will be the time it takes for the animation to be complete.
+				$(this).animate({width:"400px", height:"400px"}, 2000)
+			
+			});
+			
+			
+		// Instead of writing out the array like that which will be to long we can write out the array in this method.
+			$("#green-circle").click(function() {
+			
+				$(this).animate({
+				height:"400px",
+				width:"400px",
+				marginLeft:"100px",
+				marginTop:"100px",
+				color:"pink",
+				}, 2000);
+			
+			});
+			
+			
+		// While here once the animation is done we use the call back action to change the color of the circle.
+			$("#green-circle").click(function() {
+			
+				$(this).animate({
+				height:"400px",
+				width:"400px",
+				marginLeft:"100px",
+				marginTop:"100px",
+				color:"pink",
+				}, 2000, function() {
+				
+				$(this).css("background-color", "red");
+				
+				});
+			
+			});
+			
+					
+			</script>
+			
+	</body>
+
+
+</html>

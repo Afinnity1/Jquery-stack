@@ -1,0 +1,48 @@
+<html>
+
+	<head>
+	
+		<title>jQuery</title>
+	
+		<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+		
+		<style type="text/css">
+		
+			#panel, #flip{
+			
+				background-color: #CCCCCC;
+				text-align:center;
+				padding: 5px;
+				border:solid 1px #C3C3C3;
+			
+			}
+		
+			#panel {
+			
+				padding:50px;
+			
+			}
+			
+		</style>
+	</head>
+
+	<body>	
+	
+		<div id="flip">Click to slide up</div>
+		<div id="panel">Hello world</div>
+
+			<script type="text/javascript">
+		// Here we use jQuery to create a slide up action for a dropbar; i.e when a dropbar is dropped we use the jQuery .slideUp action to slide it back up.		
+				$("#flip").click(function() {
+				
+					$("#panel").slideUp("slow");
+				
+				});
+				
+			
+			</script>
+			
+	</body>
+
+
+</html>

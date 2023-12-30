@@ -1,0 +1,45 @@
+<html>
+
+	<head>
+	
+		<title>jQuery</title>
+	
+		<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+		
+		<style type = "text/css">
+
+			
+		
+		</style>
+		
+	</head>
+
+	<body>	
+
+		
+		<p>welcome to this site, click the button below to continue</p>
+		<button id = "toggleButton">Toggle text</button>
+	
+			<script type="text/javascript">
+			// Here a challenge were when the toggle button is clicked it fades out the taxt and when its clicked again it fades in the text.
+				$("#toggleButton").click(function() {
+			// if the paragraph texts dislay is none when the buttton is clicked it fades in the text but if the display isnt none/empty when the button is clicked it fades out.	
+					if($("p").css("display") === "none") {
+					
+						$("p").fadeIn("slow");
+					
+					} else {
+					
+						$("p").fadeOut("slow");
+					
+					}
+						
+				});
+			
+					
+			</script>
+			
+	</body>
+
+
+</html>

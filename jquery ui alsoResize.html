@@ -1,0 +1,59 @@
+<html>
+
+	<head>
+
+		<title>jQuery</title>
+		
+			<script type = "text/javascript" src = "jquery-3.6.4.min.js"></script>
+			
+			<script src="jquery-ui/jquery-ui.js"></script>
+			
+			<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+			
+			<style type="text/css">
+			
+				#resizable {
+				
+					width:250px;
+					height:250px;
+					background-color:blue;
+				
+				}
+				
+				#resizable2 {
+				
+					width:250px;
+					height:250px;
+					background-color:pink;
+				
+				}
+				
+			</style>
+
+	</head>
+
+	<body>
+	
+			<div id="resizable"></div>
+			
+			<div id="resizable2"></div>
+		
+			<script type="text/javascript">
+		//Here we make use of the alsoResize: acion. Inwhich when the first div box is being resized the same action also affects the second div box.
+				$("#resizable").resizable({
+				
+					alsoResize: "#resizable2"
+				
+				});
+				
+				$("#resizable2").resizable();
+				
+				
+			
+			</script>
+
+
+	</body>
+
+
+</html>
